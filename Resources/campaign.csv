@@ -1,4 +1,4 @@
-cf_id,contact_id,company_name,description,goal,pledged,outcome,backers_count,country,currency,launched_date,end_date,category,sub-category,category_id,subcategory_id
+cf_id,contact_id,company_name,description,goal,pledged,outcome,backers_count,country,currency,launched_date,end_date,category,subcategory,category_id,subcategory_id
 147,4661,"Baldwin, Riley and Jackson",Pre-emptive tertiary standardization,100,0,failed,0,CA,CAD,2020-02-13 06:00:00,2021-03-01 06:00:00,food,food trucks,cat1,subcat1
 1175,2288,Werner-Bryant,Virtual uniform frame,1800,7991,successful,222,US,USD,2020-06-20 05:00:00,2021-01-30 06:00:00,food,food trucks,cat1,subcat1
 873,2067,Stewart LLC,Cloned bi-directional architecture,1300,12047,successful,113,US,USD,2020-11-29 06:00:00,2021-06-11 05:00:00,food,food trucks,cat1,subcat1
