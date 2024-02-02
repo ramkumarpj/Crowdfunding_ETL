@@ -66,7 +66,7 @@ The contact information from [contacts.xlsx](./Resources/contacts.xlsx) is extra
 * Analysis script - ./database/crowdfunding_db_analysis.sql
  
 
-## Run Insturctions
+## Run Instructions
 
 * Open [**ETL_Mini_Project_RJothis_REsser.ipynb**](./ETL_Mini_Project_RJothis_REsser.ipynb) file using Jupyter Notebook
   - Click on 'Cell > Run All' to run
