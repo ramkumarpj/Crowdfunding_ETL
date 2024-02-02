@@ -18,9 +18,9 @@ The contact information from [contacts.xlsx](./Resources/contacts.xlsx) is extra
 
 ## Transform
 
-**Category** - The unique values of category data loaded into the Category DataFrame is given a unique identifier for each value. The data is then saved to a csv file ([category.csv](./Resources/category.csv). 
+**Category** - The unique values of category data loaded into the Category DataFrame is given a unique identifier for each value. The data is then saved to a csv file ([category.csv](./Resources/category.csv)). 
 
-**Sub-Category** - The unique values of sub-category data loaded into the Sub-Category DataFrame is given a unique identifier for each value. This data is then saved to a csv file ([subcategory.csv](./Resources/subcategory.csv).
+**Sub-Category** - The unique values of sub-category data loaded into the Sub-Category DataFrame is given a unique identifier for each value. This data is then saved to a csv file ([subcategory.csv](./Resources/subcategory.csv)).
 
 **Campaign** - 
   * Column Rename: 'blurb', 'launched_at' and 'deadline' columnns of Campaign DataFrame are renamed to 'description', 'launched_date' and 'end_date' respectively.
@@ -29,9 +29,9 @@ The contact information from [contacts.xlsx](./Resources/contacts.xlsx) is extra
     - 'launched_date' and 'end_date' columns are converted from time since epoch to datatime using Pandas to_datetime method and then converted to 'YYYY-MM-DD' format using datetime strftime() method
   * Merge DataFrames - 'Campaign' DataFrame is merged with 'Category' and 'SubCategory' DataFrame on 'category' and 'subcategory' columns respectievely to add 'category_id' and 'subcategory-id' to the 'Campaign' DataFrame
   * Drop unwanted columns from the DataFrame
-  * The data is saved to a csv file ([campaign.csv](./Resources/campaign.csv)
+  * The data is saved to a csv file ([campaign.csv](./Resources/campaign.csv))
 
-**Contact** - 'name' column is split to 'first_name' and 'last_name' columns. 'name' column is dropped from the DataFrame. The columns are rearranged and saved to a csv file ([contacts.csv](./Resources/contacts.csv).  
+**Contact** - 'name' column is split to 'first_name' and 'last_name' columns. 'name' column is dropped from the DataFrame. The columns are rearranged and saved to a csv file ([contacts.csv](./Resources/contacts.csv)).  
   
 ## Load
   * ER Diagram - [QuickDBD](https://www.quickdatabasediagrams.com/) is used to create Entity Relationship diagram and generate SQLs to create the database tables.
