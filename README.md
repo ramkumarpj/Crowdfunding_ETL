@@ -89,6 +89,6 @@ The contact information is extracted to **Contact DataFrame**. The contact infor
 * Open database/crowdfunding_db_analysis.sql using Query Tool and run the SQL queries to analyze the data
     
 # Disclaimer
-This repo was published for educational purpose only. Copyright 2023-2024 edX Boot Camps LLC. All rights reserved.
+This repo was published for educational purpose only. Copyright 2024 edX Boot Camps LLC. All rights reserved.
 
 
