@@ -4,21 +4,22 @@ This project takes the crowd funding data provided in excel files through **Extr
 
 ## Datasets
 
-The input dataset is provided in 2 excel files - **crowdfunding.xlsx & contacts.xlsx.**
+The input dataset is provided in 2 excel files - **[crowdfunding.xlsx](./Resources/crowdfunding.xlsx) & [contacts.xlsx](./Resources/contacts.xlsx).**
+
 
 ## Extract
 
 The data is extracted from excel file to a Pandas DataFrame.
-The category and sub-category information from crowdfunding.xlsx is extracted to **Category and Sub-category DataFrames** respectievely.
-The rest of the information from crowdfunding.xlsx is extracted to **Campaign DataFrame**.
-The contact information is extracted to **Contact DataFrame**. The contact information is provided as a JSON string in the excel file. The JSON string is converted to JSON object/Python Dictionary using json library.  
+The category and sub-category information from [crowdfunding.xlsx](./Resources/crowdfunding.xlsx) is extracted to **Category and Sub-category DataFrames** respectievely.
+The rest of the data from [crowdfunding.xlsx](./Resources/crowdfunding.xlsx) is extracted to **Campaign DataFrame**.
+The contact information from [contacts.xlsx](./Resources/contacts.xlsx) is extracted to **Contact DataFrame**. The contact information is provided as a JSON string in the excel file. The JSON string is converted to JSON object/Python Dictionary using json library.  
 
 
 ## Transform
 
-**Category** - The unique values of category data loaded into the Category DataFrame is given a unique identifier for each value. The data is then saved to a csv file (category.csv). 
+**Category** - The unique values of category data loaded into the Category DataFrame is given a unique identifier for each value. The data is then saved to a csv file ([category.csv](./Resources/category.csv). 
 
-**Sub-Category** - The unique values of sub-category data loaded into the Sub-Category DataFrame is given a unique identifier for each value. This data is then saved to a csv file (subcategory.csv).
+**Sub-Category** - The unique values of sub-category data loaded into the Sub-Category DataFrame is given a unique identifier for each value. This data is then saved to a csv file ([subcategory.csv](./Resources/subcategory.csv).
 
 **Campaign** - 
   * Column Rename: 'blurb', 'launched_at' and 'deadline' columnns of Campaign DataFrame are renamed to 'description', 'launched_date' and 'end_date' respectively.
@@ -27,14 +28,14 @@ The contact information is extracted to **Contact DataFrame**. The contact infor
     - 'launched_date' and 'end_date' columns are converted from time since epoch to datatime using Pandas to_datetime method and then converted to 'YYYY-MM-DD' format using datetime strftime() method
   * Merge DataFrames - 'Campaign' DataFrame is merged with 'Category' and 'SubCategory' DataFrame on 'category' and 'subcategory' columns respectievely to add 'category_id' and 'subcategory-id' to the 'Campaign' DataFrame
   * Drop unwanted columns from the DataFrame
-  * The data is saved to a csv file (campaign.csv)
+  * The data is saved to a csv file ([campaign.csv](./Resources/campaign.csv)
 
-**Contact** - 'name' column is split to 'first_name' and 'last_name' columns. 'name' column is dropped from the DataFrame. The columns are rearranged and saved to a csv file (contacts.csv).  
+**Contact** - 'name' column is split to 'first_name' and 'last_name' columns. 'name' column is dropped from the DataFrame. The columns are rearranged and saved to a csv file ([contacts.csv](./Resources/contacts.csv).  
   
 ## Load
   * ER Diagram - [QuickDBD](https://www.quickdatabasediagrams.com/) is used to create Entity Relationship diagram and generate SQLs to create the database tables.
-  * Create Database - The Postgres database is created using PGAdmin tool.
-  * Create Tables - The SQLs generated were run to create the tables.
+  * Create Database - The Postgres database **crowdfunding_db** is created using PGAdmin tool.
+  * Create Tables - The SQLs generated [crowdfunding_db_schema.sql]( ./database/crowdfunding_db_schema.sql) were executed using PGAdmin Query tool to create the tables.
   * Load Data - The CSV files were imported into the tables created.
   * Analyze Data - The data loaded into the tables were analyzed by running select * queries on all the tables.
 
