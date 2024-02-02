@@ -1,11 +1,12 @@
 # Crowdfunding_ETL
 
-This project takes the crowd funding data provided in excel files through **Extract Transform and Load (ETL)** process and makes it avaialble in a Postgres relational database for further usage. 
+This project takes the crowd funding data provided in excel files through **Extract Transform and Load (ETL)** process and makes it avaialble in a relational database for further usage. 
 
 ## Datasets
 
 The input dataset is provided in 2 excel files - **[crowdfunding.xlsx](./Resources/crowdfunding.xlsx) & [contacts.xlsx](./Resources/contacts.xlsx).**
 
+The Crowd Funding data contains information about various projects requesting funding. The data provided needs to be extracted, transformed and loaded into a relation database so that the crowd funding requests can be analyzed futher. 
 
 ## Extract
 
@@ -67,27 +68,23 @@ The contact information from [contacts.xlsx](./Resources/contacts.xlsx) is extra
 
 ## Run Insturctions
 
-* Open a terminal
-* Confirm condo version
-  conda --version
-* Confirm jupyter version
-  jupyter --version
-* Activate conda environment
-  conda activate dev
-* Launch Jupyter Notebook
-  jupyter notebook
-* Jupyter Notebook is opened in a browser
-  - Open "ETL_Mini_Project_RJothis_REsser.ipynb" file using Jupyter Notebook
+* Open [**ETL_Mini_Project_RJothis_REsser.ipynb**](./ETL_Mini_Project_RJothis_REsser.ipynb) file using Jupyter Notebook
   - Click on 'Cell > Run All' to run
+  - This will create transformed csv files under 'Resources' folder
 
-* Install [PostgreSQL](https://www.postgresql.org/) and [PgAdmin](https://www.pgadmin.org/), if it's not already installed
-* Launch PgAdmin
-* Connect to the PostgreSQL server instance
-* Create a new Database - crowdfunding_db
+* Use PostgreSQL database or any other relational database of your choice to create 'crowdfunding_db' database
+
 * Open a Query Tool for crowdfunding_db database
-* Run database/crowdfunding_db_schema.sql to create the tables
-* Import data into each table from csv files under Resources directory
-* Open database/crowdfunding_db_analysis.sql using Query Tool and run the SQL queries to analyze the data
+
+* Run [crowdfunding_db_schema.sql](database/crowdfunding_db_schema.sql) to create the tables
+
+* Import data into each table from csv files under Resources directory in the following order
+  1. ./Resources/category.csv
+  2. ./Resources/subcategory.csv
+  3. ./Resources/contacts.csv
+  4. ./Resources/campaign.csv
+
+* Open [crowdfunding_db_analysis.sql](./database/crowdfunding_db_analysis.sql) using Query Tool and run the SQL queries to analyze the data
     
 # Disclaimer
 This repo was published for educational purpose only. Copyright 2024 edX Boot Camps LLC. All rights reserved.
