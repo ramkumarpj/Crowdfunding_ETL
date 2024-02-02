@@ -6,7 +6,7 @@ This project takes the crowd funding data provided in excel files through **Extr
 
 The input dataset is provided in 2 excel files - **[crowdfunding.xlsx](./Resources/crowdfunding.xlsx) & [contacts.xlsx](./Resources/contacts.xlsx).**
 
-The Crowd Funding data contains information about various projects requesting funding. The data provided needs to be extracted, transformed and loaded into a relation database so that the crowd funding requests can be analyzed futher. 
+The Crowd Funding data contains information about various projects requesting funding. The data provided needs to be extracted, transformed and loaded into a relational database so that the crowd funding requests can be futher analyzed. 
 
 ## Extract
 
