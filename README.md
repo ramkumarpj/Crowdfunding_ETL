@@ -11,7 +11,7 @@ The input dataset is provided in 2 excel files - **crowdfunding.xlsx & contacts.
 The data is extracted from excel file to a Pandas DataFrame.
 The category and sub-category information from crowdfunding.xlsx is extracted to **Category and Sub-category DataFrames** respectievely.
 The rest of the information from crowdfunding.xlsx is extracted to **Campaign DataFrame**.
-The contact information is extracted to **Contact DataFrame**. The contact information as a JSON string in the excel file. The JSON string is converted to JSON object/Python Dictionary using json library.  
+The contact information is extracted to **Contact DataFrame**. The contact information is provided as a JSON string in the excel file. The JSON string is converted to JSON object/Python Dictionary using json library.  
 
 
 ## Transform
