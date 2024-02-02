@@ -1,6 +1,6 @@
 # Crowdfunding_ETL
 
-This project takes the crowd funding data provided in excel files through **Extract Transform and Load (ETL)** process and makes it avaialble in a relational database for further usage. 
+This project takes the crowd funding data provided in excel files through **Extract Transform and Load (ETL)** process and makes it available in a relational database for further usage. 
 
 ## Datasets
 
